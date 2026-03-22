@@ -1,0 +1,67 @@
+import { Book, CheckCircle2, Info } from "lucide-react";
+
+export default function Learning() {
+  const topics = [
+    {
+      title: "Xử lý nước thải",
+      content: "Sử dụng phương pháp sinh học kết hợp màng lọc MBR để loại bỏ tạp chất hữu cơ và vi khuẩn.",
+      details: ["Bể hiếu khí", "Bể kỵ khí", "Lọc màng MBR", "Khử trùng UV"],
+      color: "border-blue-500"
+    },
+    {
+      title: "Xử lý khí thải",
+      content: "Hệ thống lọc bụi tĩnh điện và tháp hấp thụ hóa chất giúp loại bỏ SOx, NOx và bụi mịn PM2.5.",
+      details: ["Lọc bụi túi vải", "Hấp phụ than hoạt tính", "Xử lý ướt", "Đốt nhiệt"],
+      color: "border-emerald-500"
+    },
+    {
+      title: "Quản lý chất thải rắn",
+      content: "Phân loại tại nguồn, tái chế nhựa và kim loại, chôn lấp hợp vệ sinh đối với rác thải không thể tái chế.",
+      details: ["Ủ phân compost", "Tái chế nhựa", "Thiêu hủy phát điện", "Chôn lấp an toàn"],
+      color: "border-amber-500"
+    }
+  ];
+
+  return (
+    <div className="p-6 lg:p-8 space-y-8 max-w-5xl mx-auto">
+      <header className="text-center space-y-4">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold">
+          <Book size={16} />
+          Trung tâm kiến thức
+        </div>
+        <h1 className="text-4xl font-bold text-slate-900 tracking-tight">Kiến thức về xử lý chất thải</h1>
+        <p className="text-slate-500 max-w-2xl mx-auto">
+          Tìm hiểu các công nghệ và quy trình hiện đại nhất đang được áp dụng để bảo vệ môi trường sống của chúng ta.
+        </p>
+      </header>
+
+      <div className="grid grid-cols-1 gap-8">
+        {topics.map((topic, idx) => (
+          <div key={idx} className={`bg-white p-8 rounded-3xl shadow-sm border-l-8 ${topic.color} border border-slate-100 hover:shadow-md transition-shadow`}>
+            <div className="flex flex-col md:flex-row gap-8">
+              <div className="flex-1 space-y-4">
+                <h2 className="text-2xl font-bold text-slate-800">{topic.title}</h2>
+                <p className="text-slate-600 leading-relaxed">{topic.content}</p>
+                <div className="flex items-center gap-2 text-blue-600 font-medium cursor-pointer hover:underline">
+                  <Info size={18} />
+                  Tìm hiểu thêm kỹ thuật
+                </div>
+              </div>
+              <div className="md:w-64 bg-slate-50 p-6 rounded-2xl">
+                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-4">Quy trình chính</h4>
+                <ul className="space-y-3">
+                  {topic.details.map((detail, i) => (
+                    <li key={i} className="flex items-center gap-2 text-slate-700 text-sm font-medium">
+                      <CheckCircle2 size={16} className="text-emerald-500" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
