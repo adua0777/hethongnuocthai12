@@ -1,30 +1,29 @@
 {
-  "name": "react-example",
+  "name": "hethongnuocthai",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf dist",
     "lint": "tsc --noEmit"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
-    "axios": "^1.13.6",
+    "axios": "^1.6.7",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
-    "html2pdf.js": "^0.14.0",
-    "jspdf": "^4.2.1",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.1",
     "lucide-react": "^0.546.0",
     "motion": "^12.23.24",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.13.1",
-    "recharts": "^3.8.0",
+    "react-router-dom": "^6.22.3",
+    "recharts": "^2.8.0",
     "vite": "^6.2.0"
   },
   "devDependencies": {
@@ -33,7 +32,6 @@
     "autoprefixer": "^10.4.21",
     "tailwindcss": "^4.1.14",
     "tsx": "^4.21.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "typescript": "~5.8.2"
   }
 }
